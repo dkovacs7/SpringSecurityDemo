@@ -19,7 +19,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                    .antMatchers("/", "/home").permitAll()
+                    //.antMatchers("/", "/home").permitAll() // When this is commented out we have just the login page and the hello page
                     .anyRequest().authenticated()
                     .and()
                 .formLogin()
